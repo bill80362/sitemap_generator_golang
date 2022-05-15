@@ -1,4 +1,4 @@
-module billtest.com/aaa
+module billtest.com/sitemap_generator
 
 go 1.18
 
