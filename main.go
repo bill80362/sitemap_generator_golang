@@ -19,7 +19,7 @@ var projectName = os.Args[2]
 
 var j = 0 //總共跑幾次
 
-func ExampleScrape(url string) bool {
+func goSpide(url string) bool {
 	//實際跑
 	res, err := http.Get(masterUrl + url)
 	if err != nil {
@@ -72,14 +72,14 @@ func ExampleScrape(url string) bool {
 		j++
 		fmt.Printf("index %d: %s\n", j, title)
 		//深度優先
-		ExampleScrape(title)
+		goSpide(title)
 	})
 	return true
 }
 
 func main() {
 	//開始爬
-	ExampleScrape("/")
+	goSpide("/")
 }
 
 //error
